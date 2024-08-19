@@ -1,0 +1,16 @@
+{
+  "name": "appsalon_mevn_be",
+  "version": "1.0.0",
+  "description": "BE para appsalon en MEVN",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "author": "Cristian Sena",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
