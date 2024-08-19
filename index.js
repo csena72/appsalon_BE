@@ -1,4 +1,5 @@
 import express from 'express';
+import colors from 'colors';
 import { db } from './config/db.js';
 import servicesRoutes from './routes/servicesRoutes.js';
 import { configDotenv } from 'dotenv';
@@ -14,5 +15,5 @@ db();
 app.use('/api/services', servicesRoutes);
 
 app.listen(port, () => {
-    console.log(`Server listening at ${process.env.HOST}:${port}`); 
+    console.log( colors.blue(`Server listening at ${process.env.HOST}:${port}`)); 
 });
