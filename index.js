@@ -12,6 +12,8 @@ const port = process.env.PORT || 3000;
 
 db();
 
+app.use(express.json());
+
 app.use('/api/services', servicesRoutes);
 
 app.listen(port, () => {
