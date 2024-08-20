@@ -20,13 +20,12 @@ const createService = async (req, res) => {
 }
 
 const getServices = async (req, res) => {
-    const services = await Services.find();
-
-    if(!services) {
-        return handleNotFoundError('El servicio no existe', res);
+    try {
+        const services = await Services.find();
+        res.json(services);
+    } catch (error) {
+        console.log(error);
     }
-
-    res.json(services);
 }
 
 const getServiceById = async (req, res) => {
