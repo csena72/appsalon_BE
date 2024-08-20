@@ -10,10 +10,13 @@ import {
 
 const router = express.Router();
 
-router.post('/', createService);
-router.get('/', getServices);
-router.get('/:id', getServiceById);
-router.put('/:id', updateService);
-router.delete('/:id', deleteService);
+router.route('/')
+    .get(getServices)
+    .post(createService);
+
+router.route('/:id')
+    .get(getServiceById)
+    .put(updateService)
+    .delete(deleteService);
 
 export default router;
